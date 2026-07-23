@@ -20,11 +20,18 @@ const CATEGORY_EMOJI: Record<string, string> = {
   cestas: "🧺",
 };
 
+// Emoji especifico por produto (quando o da categoria nao encaixa)
+const SLUG_EMOJI: Record<string, string> = {
+  "coentro-organico": "🌿",
+  "couve-manteiga-organica": "🥬",
+};
+
 export default function ProductCard({ product }: { product: Product }) {
   const { add } = useCart();
   const [imgError, setImgError] = useState(false);
   const [added, setAdded] = useState(false);
-  const emoji = CATEGORY_EMOJI[product.category] ?? "🌱";
+  const emoji =
+    SLUG_EMOJI[product.slug] ?? CATEGORY_EMOJI[product.category] ?? "🌱";
   const semEstoque = product.stock <= 0;
 
   function handleAdd() {

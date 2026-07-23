@@ -85,7 +85,7 @@ export const PRODUCTS: Product[] = [
     unit: "maço",
     category: "temperos",
     image:
-      "https://images.unsplash.com/photo-1600180758890-6b94519a8ba6?w=800&q=80",
+      "",
     stock: 45,
     active: true,
     featured: false,
@@ -133,7 +133,7 @@ export const PRODUCTS: Product[] = [
     unit: "maço",
     category: "verduras",
     image:
-      "https://images.unsplash.com/photo-1540148426945-6cf22a6b2383?w=800&q=80",
+      "",
     stock: 42,
     active: true,
     featured: false,
